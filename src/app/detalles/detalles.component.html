@@ -1,0 +1,24 @@
+<div class="album text-muted album2">
+  <div class="container">
+    <div class="row">
+      <div class="card cardDetalles" style="width: 18rem;" *ngFor="let detalle of detalles">
+        <img src={{detalle.volumeInfo.imageLinks.smallThumbnail}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{detalle.volumeInfo.title}}</h5>
+          <p class="card-text">{{detalle.volumeInfo.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Categoria: {{detalle.volumeInfo.categories}}</li>
+          <li class="list-group-item">Editorial: {{detalle.volumeInfo.publisher}}</li>
+          <li class="list-group-item">Fecha de publicación: {{detalle.volumeInfo.publishedDate}}</li>
+          <li class="list-group-item">Número de páginas: {{detalle.volumeInfo.pageCount}}</li>
+          <li class="list-group-item">Valoración: {{detalle.volumeInfo.averageRating}}</li>
+          <li class="list-group-item">Precio: {{detalle.saleInfo.retailPrice.amount}}€</li>
+        </ul>
+        <div class="card-body">
+          <button type="button" class="btn btn-secondary" routerLink="/inicio">Volver a inicio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

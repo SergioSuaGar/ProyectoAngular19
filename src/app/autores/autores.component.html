@@ -1,0 +1,28 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Autores</h1>
+      <p class="lead">Busca los libros más relevantes de tu autor favorito...</p>
+      <input class="form-control" id="search" placeholder="Escribe el nombre del Autor..." (keydown.enter)="OnSearch(valorBuscado)" aria-label="Search" [(ngModel)]="valorBuscado" [value]="valorBuscado">
+    </div>
+  </section>
+  <div class="album text-muted album2">
+    <div class="container">
+      <div class="row">
+        <div class="card" *ngFor="let libro of libros">
+          <img class="card-img-top rounded-right" src={{libro.volumeInfo.imageLinks.smallThumbnail}}>
+          <div class="card-body">
+            <h5 class="card-title">{{libro.volumeInfo.title}}</h5>
+            <p class="card-text">Autor: {{libro.volumeInfo.authors|filtro}}</p>
+            <button type="button" class="btn btn-secondary"  routerLink="/detalles/:{{libro.id}}">Detallar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <button type="button" class="btn btn-secondary col-12" (click)="siguientePagina()">Cargar más...</button>
+      </div>
+    </div>
+  </div>
+</main>

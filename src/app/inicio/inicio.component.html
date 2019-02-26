@@ -1,0 +1,40 @@
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Todo sobre tus Libros favoritos</h1>
+      <h2 class="lead">En esta web podrás encontrar información sobre Libros, Autores, Editoriales y más.</h2>
+    </div>
+  </section>
+
+  <div class="album text-muted album2">
+    <div class="container">
+      <h1>La saga más buscada...</h1>
+      <div class="row">
+        <div class="card" *ngFor="let libro of libros">
+          <img class="card-img-top rounded-right" src={{libro.volumeInfo.imageLinks.smallThumbnail}}>
+          <div class="card-body">
+            <h5 class="card-title">{{libro.volumeInfo.title}}</h5>
+            <p class="card-text">Autor: {{libro.volumeInfo.authors|filtro}}</p>
+            <button type="button" class="btn btn-secondary" routerLink="/detalles/:{{libro.id}}">Detallar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="album text-muted album2">
+    <div class="container">
+      <h1>Los libros del escritor más relevante...</h1>
+      <div class="row">
+        <div class="card" *ngFor="let libro of libros2">
+          <img class="card-img-top rounded-right" src={{libro.volumeInfo.imageLinks.smallThumbnail}}>
+          <div class="card-body">
+            <h5 class="card-title">{{libro.volumeInfo.title}}</h5>
+            <p class="card-text">Autor: {{libro.volumeInfo.authors|filtro}}</p>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#miModal" routerLink="/detalles/:{{libro.id}}">Detallar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

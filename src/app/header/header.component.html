@@ -1,0 +1,18 @@
+<header class="fixed-top" [ngClass]="{oscuro: estilo == 'oscuro', claro: estilo == 'claro'}">
+  <div class="navbar navbar-dark">
+    <div class="container d-flex justify-content-between">
+      <a routerLink="/inicio" routerLinkActive="active">Inicio</a>
+      <a routerLink="/libros" routerLinkActive="active">Libros</a>
+      <a routerLink="/autores" routerLinkActive="active">Autores</a>
+      <div class="input-group tema">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Tema</label>
+        </div>
+        <select class="custom-select" (change)="cambiarEstilo()">
+          <option value="oscuro">Oscuro</option>
+          <option value="claro">Claro</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</header>
