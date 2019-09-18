@@ -1,5 +1,6 @@
 ## VERSIÓN EN PRODUCCIÓN AQUI
-El host da problemas a la hora de detallar los libros, si a la primera no te muestra nada, vuelve a buscar los libros y le das a detallar. 
+El host da problemas a la hora de detallar los libros, si a la primera no te muestra nada, vuelve a buscar los libros y le das a detallar.
+
 https://cocky-jang-57bd47.netlify.com
 
 # Angular
